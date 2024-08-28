@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Upload Image</title>
+  </head>
   <body>
-    <h1>live Stream</h1>
-    <div>
-      <img src="{{ url_for('video') }}" width="50%" />
-
-      <label for="myfile">Photo Upload</label>
-      <input type="file" id="myfile" name="myfile" />
-      <label for="myfile">Video Upload</label>
-      <input type="file" id="myfile" name="myfile" />
-    </div>
+    <h1>Upload an Image</h1>
+    <form method="POST" enctype="multipart/form-data">
+      <input type="file" name="file" />
+      <input type="submit" value="Upload" />
+    </form>
   </body>
 </html>
-
